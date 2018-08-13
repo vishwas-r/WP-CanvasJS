@@ -1,6 +1,6 @@
 <?php
 /**
- * CanvasJSChart shortcode
+ * canvasjschart shortcode
  *
  * @package	 WPCanvasJSCharts
  * @since    1.0.0
@@ -19,7 +19,7 @@ if (!function_exists('canvasjs_chart_shortcode')){
 	// Add the action.
 	add_action('plugins_loaded', function() {
 		// Add the shortcode.
-		add_shortcode( 'CanvasJSChart', 'canvasjs_chart_shortcode' );
+		add_shortcode( 'canvasjschart', 'canvasjs_chart_shortcode' );
 	});
 
 	/**
