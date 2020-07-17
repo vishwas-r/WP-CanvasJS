@@ -1,15 +1,15 @@
 <?php
 /**
  * Plugin Name:       WP CanvasJS Charts
- * Plugin URI:        https://csultimates.net/
+ * Plugin URI:        https://csultimates.com/
  * Description:       Add CanvasJS Charts to your WordPress Pages / Posts
- * Version:           1.0.0
+ * Version:           1.1.0
  * Author:            Vishwas R
- * Author URI:        https://csultimates.net/
+ * Author URI:        https://csultimates.com/
  * License:           MIT License
  * License URI:       https://opensource.org/licenses/MIT
  *
- * @link              https://csultimates.net/
+ * @link              https://csultimates.com/
  * @package           WPCanvasJSCharts
  */
 
