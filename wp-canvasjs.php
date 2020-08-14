@@ -1,16 +1,16 @@
 <?php
 /**
- * Plugin Name:       WP CanvasJS Charts
- * Plugin URI:        https://csultimates.com/
- * Description:       Add CanvasJS Charts to your WordPress Pages / Posts
- * Version:           1.1.0
+ * Plugin Name:       WP CanvasJS
+ * Plugin URI:        https://vishwas.me/
+ * Description:       Add CanvasJS Charts & StockCharts to your WordPress Pages / Posts
+ * Version:           1.2.0
  * Author:            Vishwas R
- * Author URI:        https://csultimates.com/
+ * Author URI:        https://vishwas.me/
  * License:           MIT License
  * License URI:       https://opensource.org/licenses/MIT
  *
- * @link              https://csultimates.com/
- * @package           WPCanvasJSCharts
+ * @link              https://vishwas.me/
+ * @package           WPCanvasJS
  */
 
 // If this file is called directly, abort.
@@ -25,7 +25,7 @@ if ( ! defined( 'WPINC' ) ) {
  */
 // Plugin version.
 if ( ! defined( 'PLUGIN_VERSION' ) ) {
-	define( 'PLUGIN_VERSION', '1.0.0' );
+	define( 'PLUGIN_VERSION', '1.2.0' );
 }
 
 if ( ! defined( 'PLUGIN_NAME' ) ) {
@@ -45,8 +45,12 @@ if ( ! defined( 'PLUGIN_URL' ) ) {
  *
  * @since 1.0.0
  */
-if ( file_exists( PLUGIN_DIRECTORY . '/charts/wp-canvasjs-chart.php' ) ) {
-	require_once( PLUGIN_DIRECTORY . '/charts/wp-canvasjs-chart.php' );
+if ( file_exists( PLUGIN_DIRECTORY . '/chart/wp-canvasjs-chart.php' ) ) {
+	require_once( PLUGIN_DIRECTORY . '/chart/wp-canvasjs-chart.php' );
+}
+
+if ( file_exists( PLUGIN_DIRECTORY . '/stockchart/wp-canvasjs-stockchart.php' ) ) {
+	require_once( PLUGIN_DIRECTORY . '/stockchart/wp-canvasjs-stockchart.php' );
 }
 
 if ( file_exists( PLUGIN_DIRECTORY . '/admin/admin-settings.php' ) ) {

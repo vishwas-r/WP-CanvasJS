@@ -2,17 +2,17 @@
 /**
  * canvasjschart shortcode
  *
- * @package	 WPCanvasJSCharts
+ * @package	 WPCanvasJS
  * @since    1.0.0
  */
 
- if (!function_exists('canvasjs_script')){
-	function add_canvasjs_script() {
-		$_url = get_option('canvasjs_charts_url');
-		wp_register_script('canvasjs_script', $_url, array('jquery'),'1.1', true);
-		wp_enqueue_script('canvasjs_script');
+ if (!function_exists('canvasjs_chart_script')){
+	function add_canvasjs_chart_script() {
+		$_url = get_option('canvasjs_chart_url');
+		wp_register_script('canvasjs_chart_script', $_url, array('jquery'),'1.1', true);
+		wp_enqueue_script('canvasjs_chart_script');
 	}
-	add_action('wp_enqueue_scripts', 'add_canvasjs_script');
+	add_action('wp_enqueue_scripts', 'add_canvasjs_chart_script');
 }
  
 if (!function_exists('canvasjs_chart_shortcode')){
@@ -30,19 +30,19 @@ if (!function_exists('canvasjs_chart_shortcode')){
 	 * @since  1.0.0
 	 */
 	function canvasjs_chart_shortcode($atts) {
-		STATIC $count = 0;
-		$containerID = "chartContainer".$count;
-		$chart = "chart".$count;
-		$count++;
+		STATIC $chartCount = 0;
+		$chartContainerID = "chartContainer".$chartCount;
+		$chart = "chart".$chartCount;
+		$chartCount++;
 		
 		$chartOptions = $atts['options'];
 		$divStyle = $atts['style'];
 		
 		//Safe in PHP 7.0.
-		$_chart .= '<div id='.$containerID.' style='.$divStyle.'></div>
+		$_chart .= '<div id='.$chartContainerID.' style='.$divStyle.'></div>
 				   <script>
 						jQuery(document).ready(function( $ ){
-							var '.$chart.'= new CanvasJS.Chart('. $containerID .','. $chartOptions .');'.
+							var '.$chart.'= new CanvasJS.Chart('. $chartContainerID .','. $chartOptions .');'.
 							$chart.'.render();
 						});
 				   </script>';
