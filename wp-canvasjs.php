@@ -3,7 +3,7 @@
  * Plugin Name:       WP CanvasJS
  * Plugin URI:        https://vishwas.me/
  * Description:       Add CanvasJS Charts & StockCharts to your WordPress Pages / Posts
- * Version:           1.2.0
+ * Version:           1.2.1
  * Author:            Vishwas R
  * Author URI:        https://vishwas.me/
  * License:           MIT License
