@@ -1,24 +1,20 @@
 <?php 
 defined( 'ABSPATH' ) or exit;
 
-
-function canvasjs_chart_register_settings() {
+function canvasjs_settings_register() {
    add_option( 'canvasjs_chart_url', 'https://canvasjs.com/assets/script/canvasjs.min.js');
-   register_setting( 'canvasjs_chart_options_group', 'canvasjs_chart_url', 'canvasjs_chart_callback' );
-}
-add_action( 'admin_init', 'canvasjs_chart_register_settings' );
-
-function canvasjs_stockchart_register_settings() {
    add_option( 'canvasjs_stockchart_url', 'https://canvasjs.com/assets/script/canvasjs.stock.min.js');
-   register_setting( 'canvasjs_stockchart_options_group', 'canvasjs_stockchart_url', 'canvasjs_stockchart_callback' );
+   register_setting( 'canvasjs_chart_options_group', 'canvasjs_chart_url', 'canvasjs_chart_callback' );
+   register_setting( 'canvasjs_chart_options_group', 'canvasjs_stockchart_url', 'canvasjs_chart_callback' );
 }
-add_action( 'admin_init', 'canvasjs_stockchart_register_settings' );
+add_action( 'admin_init', 'canvasjs_settings_register' );
 
 
-function canvasjs_chart_register_options_page() {
+
+function canvasjs_register_options_page() {
   add_menu_page('CanvasJS Settings', 'CanvasJS', 'manage_options', 'canvasjssettings', 'canvasjs_settings_page', 'dashicons-chart-pie', 6);
 }
-add_action('admin_menu', 'canvasjs_chart_register_options_page');
+add_action('admin_menu', 'canvasjs_register_options_page');
 
 
 function canvasjs_settings_page() {
@@ -30,7 +26,6 @@ function canvasjs_settings_page() {
 	
 	<form method="post" action="options.php">
 	<?php settings_fields( 'canvasjs_chart_options_group' ); ?>
-	<?php settings_fields( 'canvasjs_stockchart_options_group' ); ?>
 		<h2>Settings:</h2>
 		<p>If you have commercial license, you can upload the commercial version of CanvasJS to your server and provide the link below</p>
 		<table>
@@ -50,8 +45,6 @@ function canvasjs_settings_page() {
 <?php
 }
 
-
-
 function canvasjs_admin_page() {
     echo '<h3>CanvasJS Charts & StockCharts</h3>';
 	?>
@@ -63,5 +56,3 @@ function canvasjs_admin_page() {
         </div>
   <?php
 }
-
-
