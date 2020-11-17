@@ -27,7 +27,7 @@ Note:
 - Don't add space within style. i.e. Use `style="width:100%;height:300px"` and avoid `style="width: 100%; height: 300px"`
 
 #### Plugin Testing
-- Last Tested with: WordPress 5.5, CanvasJS Charts v3.2.3 & CanvasJS StockCharts v1.2.3
+- Last Tested with: WordPress 5.5.3, CanvasJS Charts v3.2.3 & CanvasJS StockCharts v1.2.3
 - Last Tested on: Nov 17, 2020
 
 #### License
