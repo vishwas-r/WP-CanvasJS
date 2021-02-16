@@ -3,7 +3,7 @@
 This plugin allows you to create and add interactive Charts & StockCharts to your wordpress page and posts using CanvasJS library. It creates responsive high-performance Charts & StockCharts that renders across devices including iPhone, iPad, Android, Mac & PCs.
 
 ## CanvasJS Library
-CanvasJS is built from ground up for high performance data visualization and can render millions of data points in a matter of milliseconds. CanvasJS is trusted by 500K+ users in 192 Countries. Customers include Microsoft, NASA, Apple, Intel, Boing, Samsung, BMW, Sony, HP, Bosch, Motorola, etc.
+CanvasJS is built from ground up for high performance data visualization and can render millions of data points in a matter of milliseconds.
 
 Note:
 - This plugin requires you to have CanvasJS License. Please visit [CanvasJS](https://canvasjs.com/license/) for more info.
