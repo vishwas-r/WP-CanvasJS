@@ -9,7 +9,7 @@
  if (!function_exists('canvasjs_stockchart_script')){
 	function add_canvasjs_stockchart_script() {
 		$_url = get_option('canvasjs_stockchart_url');
-		wp_register_script('canvasjs_stockchart_script', $_url, array('jquery'),'1.1', true);
+		wp_register_script('canvasjs_stockchart_script', $_url, array('jquery'), null, true);
 		wp_enqueue_script('canvasjs_stockchart_script');
 	}
 	add_action('wp_enqueue_scripts', 'add_canvasjs_stockchart_script');
