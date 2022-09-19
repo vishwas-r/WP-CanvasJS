@@ -16,19 +16,29 @@ Note:
 #### CanvasJS Chart
 - Add shortcode `[canvasjschart]`
 - Pass chart-options to the chart as 'options'.
-  >[canvasjschart options="{title:{text: 'CanvasJS Column Chart'}, data: new Array({dataPoints: new Array({ label: 'apple', y: 10 },{ label: 'orange', y: 15 },{ label: 'banana', y: 25 },{ label: 'mango', y: 30 },{ label: 'grape', y: 28 })})}" style="width:100%;height:300px"]
+  >[canvasjschart options="{title:{text: 'CanvasJS Column Chart'}, data: new Array({dataPoints: new Array({ label: 'apple', y: 10 },{ label: 'orange', y: 15 },{ label: 'banana', y: 25 },{ label: 'mango', y: 30 },{ label: 'grape', y: 28 })})}"]
+or
+- Save chart options as json file & pass it as 'optionsurl'.
+  >[canvasjschart optionsurl="URL"
   
 #### CanvasJS StockChart
 - Add shortcode `[canvasjsstockchart]`
 - Pass chart-options to the chart as 'options'.
-  >[canvasjsstockchart options="{title:{text: 'CanvasJS StockChart'}, charts: new Array({data: new Array({dataPoints: new Array({ label: 'apple', y: 10 },{ label: 'orange', y: 15 },{ label: 'banana', y: 25 },{ label: 'mango', y: 30 },{ label: 'grape', y: 28 })})})}" style="width:100%;height:400px"]
+  >[canvasjsstockchart options="{title:{text: 'CanvasJS StockChart'}, charts: new Array({data: new Array({dataPoints: new Array({ label: 'apple', y: 10 },{ label: 'orange', y: 15 },{ label: 'banana', y: 25 },{ label: 'mango', y: 30 },{ label: 'grape', y: 28 })})})}"]
+or
+- Save chart options as json file & pass it as 'optionsurl'.
+  >[canvasjsstockchart optionsurl="URL"
+  
+## Styling Chart Container
+You can pass style the chart / stockchart container by passing style parameter 
+ >[canvasjschart optionsUrl="https://api.npoint.io/5448b28da1502b036561" style="width:100%;height:360px"]
 
 Note:
 - Don't add space within style. i.e. Use `style="width:100%;height:300px"` and avoid `style="width: 100%; height: 300px"`
 
 #### Plugin Testing
-- Last Tested with: WordPress 5.5.3, CanvasJS Charts v3.2.3 & CanvasJS StockCharts v1.2.3
-- Last Tested on: Nov 17, 2020
+- Last Tested with: WordPress 6.0.2, CanvasJS Charts v3.6.7 & CanvasJS StockCharts v1.6.7
+- Last Tested on: Sep 19, 2022
 
 #### License
 MIT

@@ -3,7 +3,7 @@
  * canvasjschart shortcode
  *
  * @package	 WPCanvasJS
- * @since    1.0.0
+ * @since    1.3.0
  */
 
  if (!function_exists('canvasjs_chart_script')){
@@ -27,7 +27,7 @@ if (!function_exists('canvasjs_chart_shortcode')){
 	 *
 	 * @param  Attributes $atts
 	 * @return string
-	 * @since  1.0.0
+	 * @since  1.3.0
 	 */
 	function canvasjs_chart_shortcode($atts) {
 		STATIC $chartCount = 0;
@@ -35,8 +35,14 @@ if (!function_exists('canvasjs_chart_shortcode')){
 		$chart = "chart".$chartCount;
 		$chartCount++;
 		
-		$chartOptions = $atts['options'];
-		$divStyle = $atts['style'];
+		if(isset($atts['optionsurl'])) {
+			$chartOptions = file_get_contents($atts['optionsurl']);
+		}
+		if(isset($atts['options'])) {
+			$chartOptions = $atts['options'];
+		}
+		
+		$divStyle = $atts['style'];		
 		
 		//Safe in PHP 7.0.
 		$_chart .= '<div id='.$chartContainerID.' style='.$divStyle.'></div>
@@ -46,7 +52,7 @@ if (!function_exists('canvasjs_chart_shortcode')){
 							$chart.'.render();
 						});
 				   </script>';
-
+				   
 		// Return the data.
 		return $_chart;
 	}

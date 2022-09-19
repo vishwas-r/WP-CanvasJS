@@ -3,7 +3,7 @@
  * canvasjsstockchart shortcode
  *
  * @package	 WPCanvasJS
- * @since    1.2.0
+ * @since    1.3.0
  */
 
  if (!function_exists('canvasjs_stockchart_script')){
@@ -27,7 +27,7 @@ if (!function_exists('canvasjs_stockchart_shortcode')){
 	 *
 	 * @param  Attributes $atts
 	 * @return string
-	 * @since  1.2.0
+	 * @since  1.3.0
 	 */
 	function canvasjs_stockchart_shortcode($atts) {
 		STATIC $stockChartCount = 0;
@@ -35,7 +35,13 @@ if (!function_exists('canvasjs_stockchart_shortcode')){
 		$stockChart = "stockChart".$stockChartCount;
 		$stockChartCount++;
 		
-		$stockChartOptions = $atts['options'];
+		if(isset($atts['optionsurl'])) {
+			$stockChartOptions = file_get_contents($atts['optionsurl']);
+		}
+		if(isset($atts['options'])) {
+			$stockChartOptions = $atts['options'];
+		}
+		
 		$divStyle = $atts['style'];
 		
 		//Safe in PHP 7.0.
@@ -46,7 +52,7 @@ if (!function_exists('canvasjs_stockchart_shortcode')){
 							$stockChart.'.render();
 						});
 				   </script>';
-
+				   
 		// Return the data.
 		return $_stockChart;
 	}
