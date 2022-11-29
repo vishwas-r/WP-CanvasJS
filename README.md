@@ -42,3 +42,5 @@ Note:
 
 #### License
 MIT
+
+<a href="https://ko-fi.com/vishwas" target="_blank"> <img src="https://cdn.ko-fi.com/cdn/kofi3.png?v=3" height="50" width="210" alt="Ko-Fi" /></a>
