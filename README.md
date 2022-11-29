@@ -37,10 +37,10 @@ Note:
 - Don't add space within style. i.e. Use `style="width:100%;height:300px"` and avoid `style="width: 100%; height: 300px"`
 
 #### Plugin Testing
-- Last Tested with: WordPress 6.0.2, CanvasJS Charts v3.6.7 & CanvasJS StockCharts v1.6.7
+- Last Tested with: WordPress 6.0.2, CanvasJS Charts v3.7.2 & CanvasJS StockCharts v1.7.2
 - Last Tested on: Sep 19, 2022
 
 #### License
 MIT
 
-<a href="https://ko-fi.com/vishwas" target="_blank"> <img src="https://cdn.ko-fi.com/cdn/kofi3.png?v=3" height="50" width="210" alt="Ko-Fi" /></a>
+<a href="https://www.buymeacoffee.com/vishwas" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="BuyMeACoffee" width="200"/></a>
