@@ -18,7 +18,7 @@ Note:
 - Pass chart-options to the chart as 'options'.
   >[canvasjschart options="{title:{text: 'CanvasJS Column Chart'}, data: new Array({dataPoints: new Array({ label: 'apple', y: 10 },{ label: 'orange', y: 15 },{ label: 'banana', y: 25 },{ label: 'mango', y: 30 },{ label: 'grape', y: 28 })})}"]
 or
-- Save chart options as json file & pass it as 'optionsurl'.
+- **Save chart options as json file & pass it as 'optionsurl'.**
   >[canvasjschart optionsurl="URL"]
   
 #### CanvasJS StockChart
@@ -26,7 +26,7 @@ or
 - Pass chart-options to the chart as 'options'.
   >[canvasjsstockchart options="{title:{text: 'CanvasJS StockChart'}, charts: new Array({data: new Array({dataPoints: new Array({ label: 'apple', y: 10 },{ label: 'orange', y: 15 },{ label: 'banana', y: 25 },{ label: 'mango', y: 30 },{ label: 'grape', y: 28 })})})}"]
 or
-- Save chart options as json file & pass it as 'optionsurl'.
+- **Save chart options as json file & pass it as 'optionsurl'.**
   >[canvasjsstockchart optionsurl="URL"]
   
 ## Styling Chart Container
