@@ -2,8 +2,8 @@
 defined( 'ABSPATH' ) or exit;
 
 function canvasjs_settings_register() {
-   add_option( 'canvasjs_chart_url', 'https://canvasjs.com/assets/script/canvasjs.min.js');
-   add_option( 'canvasjs_stockchart_url', 'https://canvasjs.com/assets/script/canvasjs.stock.min.js');
+   add_option( 'canvasjs_chart_url', 'https://cdn.canvasjs.com/canvasjs.min.js');
+   add_option( 'canvasjs_stockchart_url', 'https://cdn.canvasjs.com/canvasjs.stock.min.js');
    register_setting( 'canvasjs_chart_options_group', 'canvasjs_chart_url', 'canvasjs_chart_callback' );
    register_setting( 'canvasjs_chart_options_group', 'canvasjs_stockchart_url', 'canvasjs_chart_callback' );
 }
