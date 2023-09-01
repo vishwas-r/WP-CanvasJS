@@ -8,7 +8,7 @@
 
  if (!function_exists('canvasjs_chart_script')){
 	function add_canvasjs_chart_script() {
-		$_url = get_option('canvasjs_chart_url');
+		$_url = get_option('canvasjs_settings')['chart_url'];
 		wp_register_script('canvasjs_chart_script', $_url, array('jquery'), null, true);
 		wp_enqueue_script('canvasjs_chart_script');
 	}
@@ -42,10 +42,10 @@ if (!function_exists('canvasjs_chart_shortcode')){
 			$chartOptions = $atts['options'];
 		}
 		
-		$divStyle = $atts['style'];		
+		$divStyle = isset($atts['style']) ? $atts['style'] : '';
 		
 		//Safe in PHP 7.0.
-		$_chart .= '<div id='.$chartContainerID.' style='.$divStyle.'></div>
+		$_chart = '<div id='.$chartContainerID.' style='.$divStyle.'></div>
 				   <script>
 						jQuery(document).ready(function( $ ){
 							var '.$chart.'= new CanvasJS.Chart('. $chartContainerID .','. $chartOptions .');'.

@@ -8,7 +8,7 @@
 
  if (!function_exists('canvasjs_stockchart_script')){
 	function add_canvasjs_stockchart_script() {
-		$_url = get_option('canvasjs_stockchart_url');
+		$_url = get_option('canvasjs_settings')['stockchart_url'];
 		wp_register_script('canvasjs_stockchart_script', $_url, array('jquery'), null, true);
 		wp_enqueue_script('canvasjs_stockchart_script');
 	}
