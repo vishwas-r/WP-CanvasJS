@@ -102,15 +102,3 @@ function canvasjs_settings_page() {
 	</script>
 <?php
 }
-
-function canvasjs_admin_page() {
-    echo '<h3>CanvasJS Charts & StockCharts</h3>';
-	?>
-	<div>
-  	<div class="wrap">
-		<form method="post" action="options.php">
-			<input name="submit" id="submit" class="button button-primary" value="Save Changes" type="submit">        
-		</form>
-	</div>
-  <?php
-}
