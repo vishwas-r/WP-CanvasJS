@@ -35,6 +35,8 @@ or
 You can pass style the chart / stockchart container by passing style parameter 
  >[canvasjschart optionsUrl="https://api.npoint.io/5448b28da1502b036561" style="width:100%;height:360px"]
 
+ >[canvasjschart options="{title:{text: 'CanvasJS Column Chart'}, data: new Array({dataPoints: new Array({ label: 'apple', y: 10 },{ label: 'orange', y: 15 },{ label: 'banana', y: 25 },{ label: 'mango', y: 30 },{ label: 'grape', y: 28 })})}" style="width:100%;height:360px"]
+
 Note:
 - Don't add space within style. i.e. Use `style="width:100%;height:300px"` and avoid `style="width: 100%; height: 300px"`
 
